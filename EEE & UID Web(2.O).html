@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EEE & UI Project</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0d0d0d;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3 {
+            color: #ff007f;
+            text-shadow: 0 0 20px #ff007f;
+        }
+
+        .container {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .group-info {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px #ff007f;
+            display: inline-block;
+            margin-top: 20px;
+            width: 80%;
+            color: #00f2ff;
+            text-align: left;
+        }
+
+        .group-info p {
+            font-size: 18px;
+            margin: 10px 0;
+            color: #00f2ff;
+        }
+
+        .nav-bar {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .nav-bar a {
+            color: #ffffff;
+            background-color: #ff007f;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            box-shadow: 0 0 15px #ff007f;
+            transition: background 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .nav-bar a:hover {
+            background-color: #e60073;
+            box-shadow: 0 0 25px #ff007f;
+        }
+
+        .section {
+            margin: 40px auto;
+            padding: 30px;
+            border-radius: 15px;
+            color: #ffffff;
+            width: 80%;
+            text-align: left;
+            box-shadow: 0 0 20px rgba(255, 0, 127, 0.6);
+        }
+
+        #introduction {
+            background: linear-gradient(45deg, #ff007f, #8e44ad);
+        }
+
+        #objectives {
+            background: linear-gradient(45deg, #00f2ff, #008080);
+        }
+
+        #methodology {
+            background: linear-gradient(45deg, #ff7f50, #ff4500);
+        }
+
+        #future-scope {
+            background: linear-gradient(45deg, #7fff00, #32cd32);
+        }
+
+        .code-button {
+            background-color: #ff007f;
+            color: #ffffff;
+            padding: 15px 40px;
+            font-size: 16px;
+            font-weight: 600;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            display: inline-block;
+            margin-top: 30px;
+            box-shadow: 0 0 15px #ff007f;
+            transition: background 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+        }
+
+        .code-button:hover {
+            background-color: #e60073;
+            box-shadow: 0 0 25px #ff007f;
+        }
+
+        .code-section {
+            display: none;
+            background-color: #1e1e1e;
+            color: #00ffcc;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px #ff007f;
+            margin-top: 20px;
+            overflow: auto;
+            text-align: left;
+            white-space: pre-wrap;
+            font-family: 'Courier New', Courier, monospace;
+            max-height: 500px;
+        }
+
+        .show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>EEE And UID Project</h1>
+    <h2>Photovoltaic Supply DC Motor Fed Through DC-DC Converter Using Neural Networks</h2>
+    <h3>AIE-B</h3>
+
+    <div class="group-info" style="text-align: center;">
+    <p><strong>1.</strong> Aadhijith - Roll Number: CB.SC.U4AIE24113</p>
+    <p><strong>2.</strong> Kamalesh - Roll Number: CB.SC.U4AIE24121</p>
+    <p><strong>3.</strong> Siva Adithya - Roll Number: CB.SC.U4AIE24126</p>
+    <p><strong>4.</strong> Siddharth Sanker - Roll Number: CB.SC.U4AIE24151</p>
+</div>
+<div class="logo">
+    <img src="C:\Users\umasi\Pictures\Screenshots\WhQq1FiB-amrita-vishwa-vidyapeetham-university-logo-colored-version.svg" alt="University Logo">
+</div>
+
+<style>
+    .logo {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 120px; /* Adjust size as needed */
+    }
+
+    .logo img {
+        width: 100%;
+        height: auto;
+    }
+</style>
+
+    <!-- Navigation Bar -->
+    <div class="nav-bar">
+        <a href="#introduction">Introduction</a>
+        <a href="#objectives">Objectives</a>
+        <a href="#methodology">Methodology</a>
+        <a href="#future-scope">Future Scope</a>
+    </div>
+
+
+    <!-- Sections -->
+  <div id="introduction" class="section">
+    <h2 style="color: #0a0a0a; text-shadow: 0 0 15px #00ffcc;">Introduction</h2>
+    
+    A photovoltaic panel converts sunlight into electrical energy using the photovoltaic effect, generating direct current (DC) electricity based on sunlight intensity and panel characteristics.<p>
+</p>The output current and voltage are influenced by environmental factors such as temperature and solar radiation, calculated using standard equations involving series and shunt resistance.<p>
+</p>
+A quadratic boost converter increases the DC voltage from the PV panel using two inductors and two capacitors, achieving a higher boost ratio than a conventional boost converter.<p>
+</p>
+Maximum Power Point Tracking (MPPT) ensures the PV panel generates maximum power. An RBF (Radial Basis Function) neural network predicts the optimal duty cycle for MPPT, controlling the quadratic boost converter.<p>
+</p>
+The code includes PV power calculation, boost converter output voltage control using the Euler method, and RBF neural network training for accurate power extraction
+</div>
+
+
+   <div id="objectives" class="section">
+    <h2 style="color: #0a0a0a; text-shadow: 0 0 15px #00ffcc;">Objectives</h2>
+    
+    <ol>
+        <li>
+<p>
+            <strong style="color: #FFFF00; text-shadow: 0 0 10px #FFFF00;"> Maximize Power Output:</strong><br>
+            Optimize the PV panel output by adjusting the MPPT algorithm dynamically.
+</p>
+        </li>
+
+        <li>
+<p>
+            <strong style="color: #FFFF00; text-shadow: 0 0 10px #FFFF00;"> Implement Quadratic Boost Converter:</strong><br>
+            Design and simulate a quadratic boost converter to increase output voltage efficiently.
+</p>
+        </li>
+
+        <li>
+<p>
+            <strong style="color: #FFFF00; text-shadow: 0 0 10px #FFFF00;"> Enhance System Efficiency:</strong><br>
+            Reduce losses and increase overall system performance through optimal parameter tuning.
+</p>
+        </li>
+
+        <li>
+            <strong style="color: #FFFF00; text-shadow: 0 0 10px #FFFF00;"> Develop Intelligent MPPT Using RBF Neural Network:</strong><br>
+            Use an RBF-based neural network to improve real-time tracking of maximum power point.
+        </li>
+
+        <li>
+<p>
+            <strong style="color: #FFFF00; text-shadow: 0 0 10px #FFFF00;"> Ensure System Stability Under Load Variations:</strong><br>
+            Design control strategies to maintain stable output under varying load conditions.
+</p>
+        </li>
+        
+        <li>
+<p>
+            <strong style="color: #FFFF00; text-shadow: 0 0 10px #FFFF00;"> Simulate Real-World Operating Conditions:</strong><br>
+            Test the system under various solar irradiance and temperature conditions.
+</p>
+        </li>
+
+        <li>
+<p>
+            <strong style="color: #FFFF00; text-shadow: 0 0 10px #FFFF00;"> Minimize Computational Complexity:</strong><br>
+            Optimize neural network architecture and control loops to reduce processing time.
+</p>
+        </li>
+    </ol>
+</div>
+
+   <div id="methodology" class="section">
+    <h2 style="color: #0a0a0a; text-shadow: 0 0 15px #00ffcc;">Methodology</h2>
+    
+    <ul>
+        <li>
+<p>
+            <strong style="color: #FFFF00; text-shadow: 0 0 10px #FFFF00;">1.PV Panel Modeling:</strong>  
+            Define PV panel parameters including short circuit current, open circuit voltage, series resistance, shunt resistance, and reverse saturation current.  
+            Model the current-voltage (I-V) characteristics using the diode equation.  
+            Solve the PV current equation using the <code>fzero</code> function to calculate current at each voltage point.
+</p>
+        </li>
+
+        <li>
+<p>
+            <strong style="color: #FFFF00; text-shadow: 0 0 10px #FFFF00;">2.Power Calculation:</strong>  
+            Compute PV output power using the relation:  
+            <em>P_pv = V_pv × I_pv</em>  
+            Plot the I-V and P-V characteristics to visualize the operating behavior of the PV panel.
+</p>
+        </li>
+
+        <li>
+<p>
+            <strong style="color: #FFFF00; text-shadow: 0 0 10px #FFFF00;">3.Quadratic Boost Converter Design:</strong>  
+            Define converter parameters including inductance (L1, L2), capacitance (C1, C2), load resistance, and switching frequency.  
+            Initialize state variables for inductor currents and capacitor voltages.  
+            Apply switching logic using the Euler method to update system states at each time step.  
+            Control the duty cycle to regulate the output voltage.
+</p>
+        </li>
+
+        <li>
+<p>
+            <strong style="color: #FFFF00; text-shadow: 0 0 10px #FFFF00;">4.Maximum Power Point Tracking (MPPT) Using RBF Neural Network:</strong>  
+            Train an RBF neural network with PV voltage and current as input, and normalized power as output.  
+            Use <code>newrb</code> to create and train the network with defined spread factor and number of hidden neurons.  
+            Simulate the trained network to predict the optimal duty cycle for maximum power output.
+</p>
+        </li>
+
+        <li>
+<p>
+            <strong style="color: #FFFF00; text-shadow: 0 0 10px #FFFF00;">5.Simulation and Analysis:</strong>  
+            Simulate the PV panel and converter system under varying sunlight and load conditions.  
+            Analyze plots of I-V characteristics, P-V characteristics, and output voltage over time.  
+            Evaluate system efficiency and MPPT tracking accuracy.
+</p>
+        </li>
+
+        <li>
+<p>
+            <strong style="color: #FFFF00; text-shadow: 0 0 10px #FFFF00;">6.Optimization and Fine-Tuning:</strong>  
+            Optimize the RBF neural network by adjusting the spread factor and hidden neuron count.  
+            Improve MPPT tracking speed and accuracy by refining the control logic.  
+            Minimize output voltage ripple through capacitor and inductor tuning.
+</p>
+        </li>
+    </ul>
+</div>
+
+  <div id="future-scope" class="section">
+    <h2 style="color: #0a0a0a; text-shadow: 0 0 15px #00ffcc;">Future Scope</h2>
+    
+    <ol>
+        <li>
+<p>
+            <strong style="color: #FFFF00; text-shadow: 0 0 10px #FFFF00;"> Integration with Simulink Model:</strong><br>
+            Combine MATLAB code with Simulink for real-time system simulation.
+<p/>
+        </li>
+        
+        <li>
+<p>
+            <strong style="color: #FFFF00; text-shadow: 0 0 10px #FFFF00;"> Real-Time MPPT Enhancement:</strong><br>
+            Improve MPPT performance with adaptive learning techniques.
+</p>
+        </li>
+
+        
+        <li>
+<P>
+            <strong style="color: #FFFF00; text-shadow: 0 0 10px #FFFF00;"> Hybrid Energy Systems:</strong><br>
+            Integrate solar with wind and battery storage for hybrid operation.
+</p>
+        </li>
+
+        <li>
+<p>
+            <strong style="color: #FFFF00; text-shadow: 0 0 10px #FFFF00;"> Enhanced Stability and Efficiency:</strong><br>
+            Further optimize inductor and capacitor values to reduce power loss.
+</p>
+        </li>
+    </ol>
+</div>
+
+    <!-- Code Button -->
+    <button class="code-button" onclick="toggleCode()">Click For Code</button>
+
+    <!-- Code Section -->
+    <div id="code-section" class="code-section">
+        <code>
+% Combined Simulation: PV Panel + Quadratic Boost Converter + RBF Neural Network
+clc; clear; close all;
+
+%% PV Panel Parameters
+Isc = 8;               % Short circuit current (A)
+Voc = 21;              % Open circuit voltage (V)
+Vmpp = 17;             % Voltage at maximum power point (V)
+Impp = 7.1;            % Current at maximum power point (A)
+Ns = 72;               % Number of series-connected cells
+Rs = 0.01;             % Series resistance (Ohms)
+Rsh = 1000;            % Shunt resistance (Ohms)
+T = 25 + 273.15;       % Cell temperature (K)
+k = 1.38e-23;          % Boltzmann constant (J/K)
+q = 1.6e-19;           % Electron charge (C)
+Iph = Isc;             % Photocurrent approximation (A)
+Vt = Ns * k * T / q;   % Thermal voltage (V)
+I0 = Isc / (exp(Voc / Vt) - 1); % Reverse saturation current (A)
+
+% PV Voltage Range
+V_pv = linspace(0, Voc, 1000); % Voltage range (V)
+I_pv = zeros(size(V_pv));      % Initialize current array (A)
+
+% Solve PV Current Equation
+for idx = 1:length(V_pv)
+    f = @(I) Iph - I - I0 * (exp((V_pv(idx) + Rs * I) / Vt) - 1) - (V_pv(idx) + Rs * I) / Rsh;
+    I_pv(idx) = fzero(f, Iph); % Initial guess is Iph
+end
+
+P_pv = V_pv .* I_pv; % PV Power
+
+%% Quadratic Boost Converter Parameters
+Vin = Vmpp; % Match PV panel Vmpp for input
+L1 = 150e-6; % Inductor L1 (H)
+L2 = 100e-6; % Inductor L2 (H)
+C1 = 220e-6; % Capacitor C1 (F)
+C2 = 100e-6; % Capacitor C2 (F)
+Rload = 20; % Load resistance (Ohms)
+Fs = 100e3; % Switching frequency (Hz)
+D = 0.3;    % Duty cycle (initial guess)
+
+% Time Parameters
+t_end = 0.02; % Simulation time (s)
+dt = 1/Fs / 1000; % Time step (s)
+time = 0:dt:t_end;
+
+% Initialize QBC Variables
+iL1 = zeros(1, length(time)); % Inductor current L1
+iL2 = zeros(1, length(time)); % Inductor current L2
+vC1 = zeros(1, length(time)); % Capacitor voltage C1
+vC2 = zeros(1, length(time)); % Capacitor voltage C2
+vout = zeros(1, length(time)); % Output voltage
+vC1(1) = Vin; % Initial C1 voltage
+vC2(1) = Vin; % Initial C2 voltage
+
+% QBC Simulation Loop
+for k = 1:length(time)-1
+    if mod(time(k), 1/Fs) < D/Fs % Switch ON
+        diL1_dt = Vin / L1;
+        diL2_dt = vC1(k) / L2;
+        dvC1_dt = -iL1(k) / C1;
+        dvC2_dt = 0; % C2 holds charge
+    else % Switch OFF
+        diL1_dt = (Vin - vC1(k)) / L1;
+        diL2_dt = (vC2(k) - vC1(k)) / L2;
+        dvC1_dt = iL1(k) / C1;
+        dvC2_dt = abs(iL2(k) / C2);
+    end
+    
+    % Euler Method for Updates
+    iL1(k+1) = iL1(k) + diL1_dt * dt;
+    iL2(k+1) = iL2(k) + diL2_dt * dt;
+    vC1(k+1) = min(vC1(k) + dvC1_dt * dt, 100);
+    vC2(k+1) = min(vC2(k) + dvC2_dt * dt, 100);
+    vout(k+1) = abs(vC2(k+1));
+end
+
+%% RBF Neural Network for MPPT
+% Training Data
+input_data = [V_pv; I_pv];       % Inputs: PV voltage & current
+output_data = P_pv / max(P_pv); % Output: Normalized power
+
+% RBF Neural Network Training
+num_neurons = 10;   % Number of hidden neurons
+spread = 1;         % Spread factor
+net = newrb(input_data, output_data, 0, spread, num_neurons);
+
+% Test the RBF Network
+predicted_duty_cycle = sim(net, [V_pv; I_pv]);
+
+%% Plot Results
+figure;
+subplot(3, 1, 1);
+plot(V_pv, I_pv, 'b', 'LineWidth', 1.5);
+xlabel('Voltage (V)');
+ylabel('Current (A)');
+title('PV I-V Characteristics');
+grid on;
+
+subplot(3, 1, 2);
+plot(V_pv, P_pv, 'r', 'LineWidth', 1.5);
+xlabel('Voltage (V)');
+ylabel('Power (W)');
+title('PV P-V Characteristics');
+grid on;
+
+subplot(3, 1, 3);
+plot(time, vout, 'k', 'LineWidth', 1.5);
+xlabel('Time (s)');
+ylabel('Output Voltage (V)');
+title('Quadratic Boost Converter Output Voltage');
+grid on;
+
+fprintf('Combined simulation completed successfully.\n');
+        </code>
+    </div>
+</div>
+<div style="text-align: center; margin-top: 20px;">
+    <a href="C:\Users\umasi\Pictures\Screenshots\Screenshot 2025-03-12 030245.png" style="
+        display: inline-block;
+        padding: 12px 24px;
+        background-color: #00ffcc;
+        color: #000;
+        text-shadow: 0 0 8px #00ffcc;
+        border: none;
+        border-radius: 30px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+
+
+
+        text-decoration: none;
+        box-shadow: 0 0 12px #00ffcc;">
+        Show Result
+    </a>
+</div>
+
+
+<script>
+    function toggleCode() {
+        var codeSection = document.getElementById("code-section");
+        codeSection.classList.toggle("show");
+    }
+</script>
+
+</body>
+</html>
+
+
+
